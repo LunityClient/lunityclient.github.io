@@ -1,0 +1,15 @@
+.ly-secondary{
+    background-color: #121212;
+}
+.ly-dark{
+    background-color: rgba(25,25,25,255);
+}
+.ly-nav-dark{
+    background-color: rgba(35,35,35,255);
+}
+
+.Main {
+    background-image: url("leDance.gif");
+    background-repeat: repeat-x;
+    background-position: center;
+}

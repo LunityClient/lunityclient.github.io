@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="text-light ly-secondary">
+        <div class="modal" id="betaWarn" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-dark">Lunity is in Beta stages!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-dark">Lunity is currently in beta stages, meaning there are lots of issues. We want to ensure that Lunity will be the best it can by locking it behind a paywall until it is complete. If you'd like to purchase Lunity Beta, get in contact with us on <a href="https://discord.gg/NRKSfpp">Discord</a>.</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark ly-nav-dark shadow-sm p-3 mb-5">
+            <a class="navbar-brand" href="">Lunity<span class="badge badge-light">Beta</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Download">Download</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/NRKSfpp">Discord</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="" class="jumbotron ly-secondary Main">
+            <h1 class="display-1 text-center">Lunity<span class="badge badge-light" data-toggle="modal" data-target="#betaWarn">Beta</span></h1>
+            <h5 class="display-5 text-center">A new Minecraft: Bedrock Edition internal utility mod & hvh toolkit.</h5>
+        </div>
+        <div id="Features" class="jumbotron ly-dark Features">
+            <h1 class="display-3 text-center">Features</h1>
+            <div class="row">
+                <div class="ly-dark card card-body col-sm-4">
+                    <h3 class="card-title">Combat</h3>
+                    <ul class="card-text list-group">
+                        <li class="list-group-item ly-secondary">
+                            Killaura
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Triggerbot
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Hitbox
+                        </li>
+                    </ul>
+                </div>
+                <div class="ly-dark card card-body col-sm-4">
+                    <h3 class="card-title">Movement</h3>
+                    <ul class="card-text list-group">
+                        <li class="list-group-item ly-secondary">
+                            Jetpack
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Air Jump
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            AutoSprint
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            NoSlowDown
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            BunnyHop
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            NoWeb
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Speed
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Jesus
+                        </li>
+                    </ul>
+                </div>
+                <div class="ly-dark card card-body col-sm-4">
+                    <h3 class="card-title">Player</h3>
+                    <ul class="card-text list-group">
+                        <li class="list-group-item ly-secondary">
+                            Scaffold
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Nuker
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Velocity (AntiKnockback)
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Instabreak
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            ClickTP
+                        </li>
+                    </ul>
+                </div>
+                <div class="ly-dark card card-body col-sm-4">
+                    <h3 class="card-title">Visuals</h3>
+                    <ul class="card-text list-group">
+                        <li class="list-group-item ly-secondary">
+                            TabGUI
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Module List
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            Coords
+                        </li>
+                    </ul>
+                </div>
+                <div class="ly-dark card card-body col-sm-4">
+                    <h3 class="card-title">Extras</h3>
+                    <ul class="card-text list-group">
+                        <li class="list-group-item ly-secondary">
+                            Uninject
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            MineplexYesCheat
+                        </li>
+                        <li class="list-group-item ly-secondary">
+                            PacketLogger
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="Download" class="jumbotron ly-dark Download">
+            <h1 class="display-3 text-center">Download</h1>
+            <h5 class="display-5 text-center">Latest version: Private Beta</h5>
+            <button type="button" class="btn btn-dark btn-lg btn-block" disabled>Download</button>
+            <button type="button" class="btn btn-dark btn-lg btn-block" data-toggle="modal" data-target="#betaWarn">Purchase Beta</button>
+        </div>
+    </body>
+</html>
