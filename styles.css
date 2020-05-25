@@ -13,3 +13,11 @@
     background-repeat: repeat-x;
     background-position: center;
 }
+
+.backLogo{
+    background-color: rgba(0, 0, 0, .8);
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
