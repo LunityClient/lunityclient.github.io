@@ -10,8 +10,40 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-        
-        <link rel="stylesheet" href="styles.css">
+        <style>
+            .ly-secondary{
+                background-color: #121212;
+            }
+            .ly-dark{
+                background-color: rgba(25,25,25,255);
+            }
+            .ly-nav-dark{
+                background-color: rgba(35,35,35,255);
+            }
+
+            .epicBackground {
+                background-attachment: fixed;
+                background-position: top;
+            }
+
+            .Main{
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            .backLogo{
+                background-color: rgba(0, 0, 0, .8);
+                padding-top: 6px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+            }
+        </style>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                var images = ['bye.gif', 'doofen.gif', 'leDance.gif', 'sansDance1.gif', 'sansDance2.gif'];
+                document.getElementsByClassName('epicBackground')[0].style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
+            });
+        </script>
     </head>
     <body class="text-light ly-secondary epicBackground">
         <div class="modal" id="betaWarn" tabindex="-1" role="dialog">
