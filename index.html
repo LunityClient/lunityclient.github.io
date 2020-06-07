@@ -9,11 +9,12 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-		
-		
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 		<link rel="icon" type="image/ico" href="favicon.ico">
         <style>
-            .ly-secondary{
+            .ly-secondary{ 
                 background-color: #121212;
             }
             .ly-dark{
@@ -45,6 +46,7 @@
                 var images = ['doofen.gif', 'leDance.gif', 'spongeman.gif', 'fire.gif'];
                 document.getElementsByClassName('epicBackground')[0].style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
             });
+
         </script>
     </head>
     <body class="text-light ly-secondary epicBackground">
@@ -96,98 +98,22 @@
         </div>
         <div id="Features" class="jumbotron ly-dark Features">
             <h1 class="display-3 text-center">Features</h1>
-            <div class="row">
-                <div class="ly-dark card card-body col-sm-4">
-                    <h3 class="card-title">Combat</h3>
-                    <ul class="card-text list-group">
-                        <li class="list-group-item ly-secondary">
-                            Killaura
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Triggerbot
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Hitbox
-                        </li>
-                    </ul>
-                </div>
-                <div class="ly-dark card card-body col-sm-4">
-                    <h3 class="card-title">Movement</h3>
-                    <ul class="card-text list-group">
-                        <li class="list-group-item ly-secondary">
-                            Jetpack
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Air Jump
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            AutoSprint
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            NoSlowDown
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            BunnyHop
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            NoWeb
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Speed
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Jesus
-                        </li>
-                    </ul>
-                </div>
-                <div class="ly-dark card card-body col-sm-4">
-                    <h3 class="card-title">Player</h3>
-                    <ul class="card-text list-group">
-                        <li class="list-group-item ly-secondary">
-                            Scaffold
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Nuker
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Velocity (AntiKnockback)
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Instabreak
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            ClickTP
-                        </li>
-                    </ul>
-                </div>
-                <div class="ly-dark card card-body col-sm-4">
-                    <h3 class="card-title">Visuals</h3>
-                    <ul class="card-text list-group">
-                        <li class="list-group-item ly-secondary">
-                            TabGUI
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Module List
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            Coords
-                        </li>
-                    </ul>
-                </div>
-                <div class="ly-dark card card-body col-sm-4">
-                    <h3 class="card-title">Extras</h3>
-                    <ul class="card-text list-group">
-                        <li class="list-group-item ly-secondary">
-                            Uninject
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            MineplexYesCheat
-                        </li>
-                        <li class="list-group-item ly-secondary">
-                            PacketLogger
-                        </li>
-                    </ul>
-                </div>
+            <div class="row" id="featuresRow">
+                <script type="text/javascript">
+                    $.getJSON("https://raw.githubusercontent.com/EchoHackCmd/Lunity-Bot/master/modules.json", function(data){
+                        $.each(data, function(key, value){
+                            $("#featuresRow").append($(`<div class="ly-dark card card-body col-sm-4">
+                                <h3 class="card-title">${key}</h3>
+                                <ul class="card-text list-group" id="${key}"></ul></div>`));
+                        });
+
+                        $.each(data, function(key, value){
+                            $.each(value, function(obj, val){
+                                $(`#${key}`).append($(`<li class="list-group-item ly-secondary">${val.name}</li>`));
+                            });
+                        });
+                    });
+                </script>
             </div>
         </div>
         <div id="Download" class="jumbotron ly-dark Download">
