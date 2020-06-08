@@ -109,9 +109,9 @@
 
                         $.each(data, function(key, value){
                             $.each(value, function(obj, val){
-                                $(`#${key}`).append($(`<li class="list-group-item ly-secondary"><buttontype="button" class="btn btn-dark btn-lg btn-block" data-toggle="modal" data-target="#${val.name}Info">${val.name}</button></li>`));
+                                $(`#${key}`).append($(`<li class="list-group-item ly-secondary"><buttontype="button" class="btn btn-dark btn-lg btn-block" data-toggle="modal" data-target="#${val.name.split(" ").join("")}Info">${val.name.split(" ").join("")}</button></li>`));
 
-                                $(`#${key}`).append($(`<div class="modal" id="${val.name}Info" tabindex="-1" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title text-dark">${val.name}</h5><button type="button" class="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p class="text-dark">${val.info}</p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div></div></div></div>`));
+                                $(`#${key}`).append($(`<div class="modal" id="${val.name.split(" ").join("")}Info" tabindex="-1" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title text-dark">${val.name.split(" ").join("")}</h5><button type="button" class="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p class="text-dark">${val.info}</p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div></div></div></div>`));
                             });
                         });
                     });
